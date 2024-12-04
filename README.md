@@ -29,11 +29,20 @@ To integrate the Space-to-Depth (SPD) module into the YOLO11 framework, follow t
    from ultralytics.nn.modules.space_to_depth import space_to_depth
    ```
 
-3. Update the YOLO11 model's YAML configuration file to include the `space_to_depth` module. Example configurations can be found in the `cfgs` directory of this repository.
+3. modify the `parse_model` function in `tasks.py` by adding the following code under the `if m in ...` branch:
+   
+   ```python
+   elif m is space_to_depth:
+       c2 = 4 * ch[f]
+   ```
+   
+   This ensures proper handling and integration of the `space_to_depth` module within the YOLO11 model architecture.
+
+4. Update the YOLO11 model's YAML configuration file to include the `space_to_depth` module. Example configurations can be found in the `cfgs` directory of this repository.
 
 **Notes:**
 
 - The Space-to-Depth module is based on the original paper by Sunkara et al., titled *"No More Strided Convolutions or Pooling: A New CNN Building Block for Low-Resolution Images and Small Objects"*.
-- The official code for the SPD module can be found in the repository [SPD-Conv](https://github.com/LabSAINT/SPD-Conv/tree/main/YOLOv5-SPD).
+- The official code for the SPD module can be found in the repository: https://github.com/LabSAINT/SPD-Conv/tree/main/YOLOv5-SPD
 
 ### 3.2
