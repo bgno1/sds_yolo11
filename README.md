@@ -45,4 +45,26 @@ To integrate the Space-to-Depth (SPD) module into the YOLO11 framework, follow t
 - The Space-to-Depth module is based on the original paper by Sunkara et al., titled *"No More Strided Convolutions or Pooling: A New CNN Building Block for Low-Resolution Images and Small Objects"*.
 - The official code for the SPD module can be found in the repository: https://github.com/LabSAINT/SPD-Conv/tree/main/YOLOv5-SPD
 
-### 3.2
+### 3.2 Integrating CARAFE Upsampling into YOLO11
+
+To integrate the CARAFE upsampling module into the YOLO11 framework, follow these steps:
+
+1. Place the `code/carafe.py` file from this repository into the `ultralytics/nn/modules` folder in the YOLO11 project.
+
+2. Add the following import statement to the `ultralytics/nn/tasks.py` file:
+   
+   ```python
+   from ultralytics.nn.modules.carafe import CARAFE
+   ```
+
+3. Update the `parse_model` function in `tasks.py` to include the CARAFE module. Add `CARAFE` to the existing branch that processes modules like `Classify` and `Conv`. The updated code should look as follows:
+   
+   ```python
+   from ultralytics.nn.modules.carafe import CARAFE
+   ```
+
+4. Configure the CARAFE module in the YAML configuration file for YOLO11. Refer to the example configurations provided in the `cfgs` directory of this repository.
+
+**note:**
+
+- The CARAFE upsampling is based on the original paper by Wang et al., titled "*CARAFE: Content-Aware ReAssembly of FEatures* ".
