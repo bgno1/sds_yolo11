@@ -72,3 +72,19 @@ To integrate the CARAFE upsampling module into the YOLO11 framework, follow thes
 **note:**
 
 - The CARAFE upsampling is based on the original paper by Wang et al., titled "*CARAFE: Content-Aware ReAssembly of FEatures* ".
+
+## 4. About Mamba-YOLO
+
+- The implementation of Mamba-YOLO in our experiments strictly follows the methods provided in the original authors' GitHub repository: https://github.com/HZAI-ZJNU/Mamba-YOLO
+
+- It is important to emphasize that Mamba-YOLO represents a remarkable and valuable recent contribution to the field. However, it was not specifically designed or optimized for the drone-based maritime search and rescue object detection task. As a result, its performance scores in our experiments are lower in this particular context.
+
+- The inclusion of Mamba-YOLO in our experiments is solely intended to highlight the necessity of task-specific optimizations for the unique challenges of drone-based maritime search and rescue scenarios. The experimental results do not diminish the significance of MambaYOLO's contributions to broader object detection research.
+
+## 5. About YoloOW
+
+- The implementation of YoloOW in our experiments is based on the methods provided in the original authors' GitHub repository: https://github.com/Xjh-UCAS/YoloOW.
+
+- Please note that we adhered to all training hyperparameter settings and pre-trained models specified by YoloOW's authors. The only modification was adjusting the input image size from 1280 to 640 to ensure fair comparisons with other methods in our experiments, as all other methods use an image size of 640. Consequently, the performance metrics reported in our experiments may be slightly lower than those in YoloOW's original paper.
+
+- Additionally, YoloOW is a remarkable method specifically designed for drone-based maritime search and rescue object detection, focusing on achieving high precision rather than lightweight implementation. The inclusion of YoloOW in our experiments aims to emphasize the necessity of lightweight model optimizations for resource-constrained scenarios. This comparison does not diminish the significance of YoloOW's contributions to the field.
