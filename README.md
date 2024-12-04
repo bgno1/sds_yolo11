@@ -11,6 +11,10 @@ The `cfgs` folder contains two subfolders:
 - **`Ablation Study`**: Includes configuration files for all models used in the Ablation Study section of the paper.
 - **`SOTA Comparison`**: Contains configuration files for our proposed YOLO11 models used in the "Comparison with State-of-the-Art Methods" section of the paper.
 
+The Space-to-Depth and CARAFE modules introduced as part of the optimization strategies are available in the `code` folder of this repository. For detailed instructions on their usage, please refer to the **User Guide** section below.
+
+
+
 ## 2. SeaDronesSee Dataset
 
 The SeaDronesSee dataset, essential for maritime search and rescue object detection tasks, can be downloaded directly from the official repository: [Download SeaDronesSee Dataset](https://cloud.cs.uni-tuebingen.de/index.php/s/aJQPHLGnke68M52). For further details please refer to the official SeaDronesSee website: [https://macvi.org/](https://macvi.org/).
