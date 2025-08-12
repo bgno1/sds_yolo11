@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-This repository contains the code supporting the article **"Enhanced YOLO11 for Lightweight and Accurate Drone-Based Maritime Search and Rescue Object Detection"**, which is currently under peer review.
+This repository contains the code supporting the article **"Enhanced YOLO11 for Lightweight and Accurate Drone-Based Maritime Search and Rescue Object Detection"**.
 
 YOLO configuration files supporting the experiments in the paper can be found in the `cfgs` folder.
 
